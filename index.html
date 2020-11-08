@@ -944,23 +944,89 @@
 					</section>
 
 					<section>
-						<h3>nullptr</h3>
-
-						<pre data-id="code"><code class="cpp" data-trim data-line-number><script type="text/template">
-							int number = 37;
-							int* ptr = &number;
-
-							std::cout << ptr << std::endl; // 0x7fffd78040b8
-							std::cout << *ptr << std::endl; // 37
-						</script></code></pre>
-					</section>
-
-					<section>
-						<h3>Pekare och referenser</h3>
-					</section>
-
-					<section>
 						<h3>Pekararitmetik</h3>
+
+						<p>Kan ändra pekaren pekar i minnet</p>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekararitmetik</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="code"><code class="cpp" data-trim data-line-numbers="1-2|4"><script type="text/template">
+									char foo = '$';
+									char* ptr = &foo;
+
+									ptr++;
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div data-id="mem1" class="mem-item-invisible">.</div>
+									<div data-id="mem2" class="mem-item-value">...</div>
+									<div data-id="mem3" class="mem-item-address">...</div>
+
+									<div data-id="mem4" class="mem-item-name">foo</div>
+									<div data-id="mem5" class="mem-item-value">'$'</div>
+									<div data-id="mem6" class="mem-item-address">0x1520</div>
+
+									<div data-id="mem7" class="mem-item-invisible">.</div>
+									<div data-id="mem8" class="mem-item-value">...</div>
+									<div data-id="mem9" class="mem-item-address">...</div>
+
+									<div data-id="mem10" class="mem-item-name">ptr</div>
+									<div data-id="mem11" class="mem-item-value">0x1520</div>
+									<div data-id="mem12" class="mem-item-address">0x2502</div>
+
+									<div data-id="mem13" class="mem-item-invisible">.</div>
+									<div data-id="mem14" class="mem-item-value">...</div>
+									<div data-id="mem15" class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekararitmetik</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="code"><code class="cpp" data-trim data-line-numbers="4"><script type="text/template">
+									char foo = '$';
+									char* ptr = &foo;
+
+									ptr++;
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div data-id="mem1" class="mem-item-invisible">.</div>
+									<div data-id="mem2" class="mem-item-value">...</div>
+									<div data-id="mem3" class="mem-item-address">...</div>
+
+									<div data-id="mem4" class="mem-item-name">foo</div>
+									<div data-id="mem5" class="mem-item-value">'$'</div>
+									<div data-id="mem6" class="mem-item-address">0x1520</div>
+
+									<div data-id="memA" class="mem-item-invisible">.</div>
+									<div data-id="memB" class="mem-item-value"></div>
+									<div data-id="memC" class="mem-item-address">0x1521</div>
+
+									<div data-id="mem7" class="mem-item-invisible">.</div>
+									<div data-id="mem8" class="mem-item-value">...</div>
+									<div data-id="mem9" class="mem-item-address">...</div>
+
+									<div data-id="mem10" class="mem-item-name">ptr</div>
+									<div data-id="mem11" class="mem-item-value">0x1521</div>
+									<div data-id="mem12" class="mem-item-address">0x2502</div>
+
+									<div data-id="mem13" class="mem-item-invisible">.</div>
+									<div data-id="mem14" class="mem-item-value">...</div>
+									<div data-id="mem15" class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
 					</section>
 
 					<section>
@@ -968,7 +1034,17 @@
 					</section>
 
 					<section>
-						<h3>Nullpekare</h3>
+						<h3>nullptr</h3>
+
+						<ul>
+							<li>En pekare kan även peka på <em>inget</em></li>
+							<li>När när du ska initiera en pekare</li>
+							<li>Eller undvika ogiltig access av minne</li>
+						</ul>
+
+						<pre data-id="code"><code class="cpp" data-trim data-line-number><script type="text/template">
+							int* ptr = nullptr;
+						</script></code></pre>
 					</section>
 
 					<section>
