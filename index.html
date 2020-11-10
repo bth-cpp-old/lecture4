@@ -51,6 +51,16 @@
 				width: 5em;
 			}
 
+			.mem-item-name-grayed {
+				color: #A0A0A0;
+				background-color: #f0f1eb;
+				padding: 5px;
+				font-size: 0.6em;
+				text-align: right;
+				font-weight: bold;
+				width: 5em;
+			}
+
 			.mem-item-value {
 				color: white;
 				background-color: #404040;
@@ -71,7 +81,27 @@
 				border-radius: 5px;
 			}
 
+			.mem-item-value-grayed {
+				color:#707070;
+				background-color: #404040;
+				padding: 5px;
+				font-size: 0.5em;
+				text-align: center;
+				width: 10em;
+				border-radius: 5px;
+			}
+
 			.mem-item-address {
+				background-color: #f0f1eb;
+				padding: 5px;
+				font-size: 0.6em;
+				text-align: left;
+				font-weight: bold;
+				width: 5em;
+			}
+
+			.mem-item-address-grayed {
+				color: #A0A0A0;
 				background-color: #f0f1eb;
 				padding: 5px;
 				font-size: 0.6em;
@@ -89,6 +119,9 @@
 				font-weight: bold;
 				width: 5em;
 			}
+
+
+
 
 			.stack {
 				display: inline-grid;
@@ -169,7 +202,7 @@
 
 			.page-split {
 				display: grid;
-				grid-template-columns: auto auto;
+				grid-template-columns: 50% 50%;
 				grid-column-gap: 5px;
 				grid-row-gap: 5px;
 				align-items: center;
@@ -177,6 +210,11 @@
 
 			.page-half {
 				/* background-color: lightcoral; */
+			}
+
+			.page-half-small {
+				/* background-color: lightcoral; */
+				font-size: 0.8em;
 			}
 		</style>
 
@@ -204,123 +242,139 @@
 						<h3>Introduktion till minne</h3>
 					</section>
 
-					<section data-transition="slide-in fade-out">
-						<h3>Kort om datorns minne</h3>
-	
-						<div class="page-split">
-							<div class="page-half">
-								<ul>
-									<li>All data lagras i minnet</li>
-									<li>Access kräver en <em>address</em></li>
-								</ul>
-							</div>
-							<div class="stack-with-names">
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0001</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0002</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0003</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0004</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0005</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0006</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0007</div>
-
-								<div class="stack-item">...</div>
-								<div class="stack-name">0x0008</div>
-							</div>
-						</div>
-					</section>
-
-					<section data-transition="fade-in slide-out">
-						<h3>Kort om datorns minne</h3>
-	
-						<div class="page-split">
-							<div class="page-half">
-								<ul>
-									<li>All data lagras i minnet</li>
-									<li>Access kräver en <em>address</em></li>
-								</ul>
-							</div>
-							<div class="stack-with-names">
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0001</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0002</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0003</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0004</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0005</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0006</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0007</div>
-
-								<div class="stack-item-grayed">...</div>
-								<div class="stack-name-grayed">0x0008</div>
-							</div>
-						</div>
-					</section>
-
-					<section data-transition="fade-in slide-out">
-						<h3>Kort om datorns minne</h3>
-	
-						<div class="page-split">
-							<div class="page-half">
-								<ul>
-									<li>All data lagras i minnet</li>
-									<li>Access kräver en <em>address</em></li>
-								</ul>
-							</div>
-							<div class="stack-with-names">
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0001</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0002</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0003</div>
-
-								<div class="stack-item">data</div>
-								<div class="stack-name">0x0004</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0005</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0006</div>
-
-								<div class="stack-item-grayed">data</div>
-								<div class="stack-name-grayed">0x0007</div>
-
-								<div class="stack-item-grayed">...</div>
-								<div class="stack-name-grayed">0x0008</div>
-							</div>
-						</div>
-					</section>
-
 					<section>
 						<h3>Kort om datorns minne</h3>
-						<p>Existerar flera nivåer av minne</p>
+
+						<ul>
+							<li>Datorns minne är mycket komplext</li>
+							<li>Idag nämns det nödvändiga för C++</li>
+						</ul>
+					</section>
+
+					<section data-transition="slide-in fade-out">
+						<h3>Minnesadresser</h3>
+	
+						<div class="page-split">
+							<div class="page-half-small">
+								<ul>
+									<li>All data lagras i minnet</li>
+									<li>Access kräver en <em>address</em></li>
+									<li>Addresser här mer värden än visat här</li>
+								</ul>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0001</div>
+
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0002</div>
+
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0003</div>
+
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0004</div>
+
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0005</div>
+
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0006</div>
+
+									<div class="stack-item">data</div>
+									<div class="stack-name">0x0007</div>
+
+									<div class="stack-item">...</div>
+									<div class="stack-name">0x0008</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-transition="fade-in slide-out">
+						<h3>Minnesadresser</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<ul>
+									<li>Detta kan vara din char</li>
+								</ul>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+									<div class="stack-item-grayed">data</div>
+									<div class="stack-name-grayed">0x0001</div>
+
+									<div class="stack-item-grayed">data</div>
+									<div class="stack-name-grayed">0x0002</div>
+
+									<div class="stack-item-grayed">data</div>
+									<div class="stack-name-grayed">0x0003</div>
+
+									<div class="stack-item">'$'</div>
+									<div class="stack-name">0x0004</div>
+
+									<div class="stack-item-grayed">data</div>
+									<div class="stack-name-grayed">0x0005</div>
+
+									<div class="stack-item-grayed">data</div>
+									<div class="stack-name-grayed">0x0006</div>
+
+									<div class="stack-item-grayed">data</div>
+									<div class="stack-name-grayed">0x0007</div>
+
+									<div class="stack-item-grayed">...</div>
+									<div class="stack-name-grayed">0x0008</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section>	
+						<h3>Minnesadresser</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p>char array</p>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">...</div>
+									<div class="mem-item-address">...</div>
+
+									<div class="mem-item-name">name</div>
+									<div class="mem-item-value">'H'</div>
+									<div class="mem-item-address">0x1338</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">'e'</div>
+									<div class="mem-item-address">0x1339</div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value">'l'</div>
+									<div class="mem-item-address">0x1340</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">'l'</div>
+									<div class="mem-item-address">0x1341</div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value">'o'</div>
+									<div class="mem-item-address">0x1342</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">...</div>
+									<div class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Minneshierarki</h3>
+						<p><b>Existerar flera nivåer av minne</b></p>
 						<table>
 							<tr>
 								<td>1.</td>
@@ -333,19 +387,36 @@
 								<td></td>
 							</tr>
 							<tr>
-								<td>3.</td>
-								<td>Primärminne</td>
-								<td>RAM</td>
+								<td data-id="ram">3.</td>
+								<td data-id="ram">Primärminne</td>
+								<td data-id="ram">RAM</td>
 							</tr>
 							<tr>
-								<td>4.</td>
-								<td>Sekundärminne</td>
-								<td>Hårddisk</td>
+								<td data-id="harddrive">4.</td>
+								<td data-id="harddrive">Sekundärminne</td>
+								<td data-id="harddrive">Hårddisk</td>
 							</tr>
 							<tr>
 								<td>5.</td>
 								<td>...</td>
 								<td></td>
+							</tr>
+						</table>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Minneshierarki</h3>
+						<p><b>I denna kurs är dessa intressanta</b></p>
+						<table>
+							<tr>
+								<td data-id="ram">3.</td>
+								<td data-id="ram">Primärminne</td>
+								<td data-id="ram">RAM</td>
+							</tr>
+							<tr>
+								<td data-id="harddrive">4.</td>
+								<td data-id="harddrive">Sekundärminne</td>
+								<td data-id="harddrive">Hårddisk</td>
 							</tr>
 						</table>
 					</section>
@@ -356,40 +427,311 @@
 						<h3>Programmets minne</h3>
 					</section>
 
-					<section>
-						<h3>Stacken och heapen</h3>
-					</section>
+					<section data-transition="slide-in fade-out">
+						<h3>Minnesmodellen i C/C++</h3>
 
-					<section>
-						<h3>Stacken</h3>
-					</section>
-
-					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
 						<div class="page-split">
+							<div class="page-half-small">
+								<p>Ditt program i minnet</p>
+							</div>
 							<div class="page-half">
-								<pre><code class="cpp" data-trim data-line-numbers><script type="text/template">
-									// Not real code
-									push 5
-									push 7
-									push 16
-									pop
-									push -5
-									pop
-									pop
-									push 1
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">Text</div>
+									<div class="mem-item-address">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value">Heap start</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value">Stack start</div>
+									<div class="mem-item-address">0xFFFF</div>
+								</div>
+							</div>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h3>Minnesmodellen i C/C++</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p><b>Text</b></p>
+								<p>Din programkod</p>
+								<pre><code class="cpp" data-trim><script type="text/template">
+									// ...
+									float get_area()
+									{
+										/**/
+									}
+									// ...
 								</script></code></pre>
 							</div>
 							<div class="page-half">
-								<div class="stack">
-									<div data-id="stack-1" class="stack-invisible">5</div>
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">Text</div>
+									<div class="mem-item-address">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value-grayed">Heap</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value-grayed">Stack</div>
+									<div class="mem-item-address-grayed">0xFFFF</div>
 								</div>
 							</div>
-						</div>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h3>Minnesmodellen i C/C++</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p><b>Initialized data</b></p>
+								<p>Global data och variabler som är initierade</p>
+								<pre><code class="cpp" data-trim><script type="text/template">
+									// Global scope
+									const float PI = 3.14159f
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Text</div>
+									<div class="mem-item-address-grayed">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value-grayed">Heap</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value-grayed">Stack</div>
+									<div class="mem-item-address-grayed">0xFFFF</div>
+								</div>
+							</div>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h3>Minnesmodellen i C/C++</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p><b>Unitialized data</b></p>
+								<p>Global data och variabler som inte är initierade</p>
+								<pre><code class="cpp" data-trim><script type="text/template">
+									// Global scope
+									bool lonely_variable;
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Text</div>
+									<div class="mem-item-address-grayed">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value-grayed">Heap</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value-grayed">Stack</div>
+									<div class="mem-item-address-grayed">0xFFFF</div>
+								</div>
+							</div>
+					</section>
+
+					<section data-transition="fade-in fade-out">
+						<h3>Minnesmodellen i C/C++</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p><b>Heap</b></p>
+								<p>Dynamiskt allokerad data</p>
+								<pre><code class="cpp" data-trim><script type="text/template">
+									int dynamic_array = new int[50];
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Text</div>
+									<div class="mem-item-address-grayed">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value">Heap</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value-grayed">Stack</div>
+									<div class="mem-item-address-grayed">0xFFFF</div>
+								</div>
+							</div>
+					</section>
+
+					<section data-transition="fade-in slide-out">
+						<h3>Minnesmodellen i C/C++</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p><b>Stack</b></p>
+								<p>Lokala variabler<br>funktionsanrop<br>etc.</p>
+								<pre><code class="cpp" data-trim><script type="text/template">
+									// Local scope
+									std::string user_input
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Text</div>
+									<div class="mem-item-address-grayed">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value-grayed">Heap</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value">Stack</div>
+									<div class="mem-item-address">0xFFFF</div>
+								</div>
+							</div>
+					</section>
+
+					<section>
+						<h3>Minnesmodellen i C/C++</h3>
+
+						<div class="page-split">
+							<div class="page-half-small">
+								<p>Vi ska titta djupare på dessa<br>Heap >< Stack</p>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Text</div>
+									<div class="mem-item-address-grayed">0x0000</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Initialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">Unitialized data</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">bar</div>
+									<div class="mem-item-value">Heap</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">↓<br><br><br><br>↑</div>
+									<div class="mem-item-address"></div>
+
+									<div class="mem-item-invisible">ptr</div>
+									<div class="mem-item-value">Stack</div>
+									<div class="mem-item-address">0xFFFF</div>
+								</div>
+							</div>
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Stack</h3>
+
+						<ul>
+							<li>Datastruktur</li>
+							<li>Last in - first out (LIFO)</li>
+							<li>Push - Pop</li>
+							<li>Tänk på en hög med tallrikar</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stack</h3>
+
+						<ul>
+							<li>Tänk på en hög med tallrikar</li>
+							<ul style="font-size: 0.8em">
+								<li><b>Push:</b> Lägger på en till tallrik</li>
+								<li><b>Pop:</b> Plockar en tallrik</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="2"><script type="text/template">
@@ -413,7 +755,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="3"><script type="text/template">
@@ -437,7 +779,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="4"><script type="text/template">
@@ -462,7 +804,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="5"><script type="text/template">
@@ -488,7 +830,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="6"><script type="text/template">
@@ -513,7 +855,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="7"><script type="text/template">
@@ -539,7 +881,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="8"><script type="text/template">
@@ -564,7 +906,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="9"><script type="text/template">
@@ -588,7 +930,7 @@
 					</section>
 
 					<section data-auto-animate>
-						<h3>Vad är en stack?</h3>
+						<h3>Visualisering av stack</h3>
 						<div class="page-split">
 							<div class="page-half">
 								<pre><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
@@ -612,7 +954,571 @@
 						</div>
 					</section>
 
+					<section>
+						<h3>Stacken i ditt program</h3>
+						<ul>
+							<li>Funktionsanropelse <em>pushar</em> data till stacken</li>
+							<ul style="font-size: 0.8em">
+								<li>T.ex. lokala variabler</li>
+							</ul>
+							<li>Efter return <em>poppas</em> denna data</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="2"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="2"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="value" class="stack-item">3</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="4"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">1</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">3</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="5"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">1</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">3</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="7"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">3</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">3</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="8"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">3</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">2</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="5"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">3</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">2</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="7"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">6</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">2</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="8"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">6</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">1</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="5"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">6</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">1</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="10"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="result" class="stack-item">6</div>
+									<div data-id="result" class="stack-name">result</div>
+
+									<div data-id="value" class="stack-item">1</div>
+									<div data-id="value" class="stack-name">value</div>
+
+									<div data-id="dot" class="stack-item">...</div>
+									<div data-id="dot" class="stack-name"></div>
+
+									<div data-id="fact" class="stack-item"></div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Stacken i ditt program</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="main"><code class="cpp" data-trim data-line-numbers="2"><script type="text/template">
+									// Calculate 3*2*1
+									int fact = factorial(3);
+								</script></code></pre>
+								<pre data-id="func"><code class="cpp" data-trim data-line-numbers="1"><script type="text/template">
+									// Calculate (value!)
+									int factorial(int value)
+									{
+										int result = 1;
+										while (value > 1)
+										{
+											result *= value;
+											value--;
+										}
+										return result;
+									}
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="stack-with-names">
+
+									<div data-id="fact" class="stack-item">6</div>
+									<div data-id="fact" class="stack-name">fact</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section>
+						<h3>Heapen</h3>
+						<ul>
+							<li>Minne för dynamiskt allokerat minne</li>
+							<li>Du bestämmer när denna data rensas</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Heapen</h3>
+
+						<p>Två viktiga termer:</p>
+						<ul>
+							<li><b>Allokering</b></li>
+							<li><b>Deallokering</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Heapen</h3>
+
+						<ul>
+							<li><b>Allokering</b></li>
+							<ul style="font-size:0.8em">
+								<li>Att begära minne</li>
+								<pre style="font-size:0.5em"><code class="cpp" data-trim><script type="text/template">
+									int* foo = new int(5);
+								</script></code></pre>
+							</ul>
+							<li><b>Deallokering</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Heapen</h3>
+
+						<ul>
+							<li><b>Allokering</b></li>
+							<ul style="font-size:0.8em">
+								<li>Att begära minne</li>
+								<pre style="font-size:0.5em"><code class="cpp" data-trim><script type="text/template">
+									int* foo = new int(5);
+								</script></code></pre>
+							</ul>
+							<li><b>Deallokering</b></li>
+							<ul style="font-size:0.8em">
+								<li>Att återlämna minne</li>
+								<pre style="font-size:0.5em"><code class="cpp" data-trim><script type="text/template">
+									delete foo;
+								</script></code></pre>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h3><em>Minnes</em>regel</h3>
+
+						<p>Allt minne du <b>allokerar</b> måste du</p>
+						<p><b>deallokera</b>!</p>
+					</section>
+
+					<section>
+						<h3>Minnesläckor</h3>
+
+						<ul>
+							<li>"Borttappat" minne är en <em>minnesläcka</em></li>
+							<li>Kontinuerliga minnesläckor fyller minnet</li>
+							<li>Detta <em>paxar</em> minnet från andra program!</li>
+						</ul>
+					</section>
 				</section>
+				
 
 				
 
@@ -622,7 +1528,7 @@
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
+						<h3>Vad är referenser?</h3>
 						<ul>
 							<li>Refererar till en annan variabel</li>
 							<li><em>Ett annat namn till ett redan existerande objekt</em></li>
@@ -630,9 +1536,9 @@
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
+						<h3>Referenser</h3>
 						<p>Deklareras med '&'</p>
-						<pre><code class="cpp" data-trim data-line-numbers="|1-2|1,3"><script type="text/template">
+						<pre><code class="cpp" data-trim data-line-numbers="1-2|1,3"><script type="text/template">
 							int number = 5;
 							int copy = number;
 							int& ref = number;
@@ -640,7 +1546,7 @@
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
+						<h3>Referenser</h3>
 						<p>Exempel utan referens</p>
 						<pre><code class="cpp" data-trim data-line-numbers="1-2|4-5|7|9-10"><script type="text/template">
 							int number = 5;
@@ -652,12 +1558,12 @@
 							copy = 5000;
 
 							std::cout << number << std::endl;	// 5
-							std::cout << ref << std::endl;		// 5000
+							std::cout << copy << std::endl;		// 5000
 						</script></code></pre>
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
+						<h3>Referenser</h3>
 						<p>Exempel med referens</p>
 						<pre><code class="cpp" data-trim data-line-numbers="1-2|4-5|7|9-10"><script type="text/template">
 							int number = 5;
@@ -674,24 +1580,24 @@
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
-						<pre><code class="cpp" data-trim data-line-numbers="5,7|1-3,9|11"><script type="text/template">
+						<h3>Referenser</h3>
+						<pre><code class="cpp" data-trim><script type="text/template">
 							void double_up(int& number) {
 								number *= 2;
 							}
-
+						</script></code></pre>
+						<pre><code class="cpp" data-trim data-line-numbers="1-2|4|6"><script type="text/template">
 							int foo = 5;
-
 							std::cout << foo << std::endl;	// 5
 
-							add_one(foo);
+							double_up(foo);
 							
 							std::cout << foo << std::endl;	// 10
 						</script></code></pre>
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
+						<h3>Referenser</h3>
 						<ul>
 							<li>Initiering <em>binder</em> referensen till ett objekt</li>
 							<li>Kan inte <em>bindas</em> om</li>
@@ -707,7 +1613,7 @@
 					</section>
 
 					<section>
-						<h3>Vad är en referenser?</h3>
+						<h3>Referenser</h3>
 						<ul>
 							<li>Alla datatyper tillåter referenser</li>
 							<li>Måste dela datatyp bundet objekt</li>
@@ -732,11 +1638,11 @@
 					</section>
 
 					<section>
-						<h3>Vad är en pekare?</h3>
+						<h3>Pekare</h3>
 
 						<p>Deklareras med '*'</p>
 
-						<pre><code class="cpp" data-trim data-line-numbers=""><script type="text/template">
+						<pre><code class="cpp" data-trim data-line-numbers="1-2|4"><script type="text/template">
 							int* int_pointer;
 							float *float_pointer;
 
@@ -758,7 +1664,7 @@
 					<section data-auto-animate>
 						<h3>Hämta addressen av ett objekt</h3>
 						
-						<p>Ej förknippat med referensdeklarations!</p>
+						<p>Ej förknippat med referensdeklaration!</p>
 
 						<pre data-id="code"><code class="cpp" data-trim data-line-numbers><script type="text/template">
 							int foo = 5;
@@ -946,7 +1852,7 @@
 					<section>
 						<h3>Pekararitmetik</h3>
 
-						<p>Kan ändra pekaren pekar i minnet</p>
+						<p>Kan ändra var pekaren pekar i minnet</p>
 					</section>
 
 					<section data-auto-animate>
@@ -1029,8 +1935,275 @@
 						</div>
 					</section>
 
+					<section data-auto-animate>
+						<h3>Pekararitmetik</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="code"><code class="cpp" data-trim data-line-numbers="4"><script type="text/template">
+									char foo = '$';
+									char* ptr = &foo;
+
+									ptr++;
+								</script></code></pre>
+								<p>Farligt att dereferera denna address</p>
+								<p>Varför?</p>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div data-id="mem1" class="mem-item-invisible">.</div>
+									<div data-id="mem2" class="mem-item-value">...</div>
+									<div data-id="mem3" class="mem-item-address">...</div>
+
+									<div data-id="mem4" class="mem-item-name">foo</div>
+									<div data-id="mem5" class="mem-item-value">'$'</div>
+									<div data-id="mem6" class="mem-item-address">0x1520</div>
+
+									<div data-id="memA" class="mem-item-invisible">.</div>
+									<div data-id="memB" class="mem-item-value"></div>
+									<div data-id="memC" class="mem-item-address">0x1521</div>
+
+									<div data-id="mem7" class="mem-item-invisible">.</div>
+									<div data-id="mem8" class="mem-item-value">...</div>
+									<div data-id="mem9" class="mem-item-address">...</div>
+
+									<div data-id="mem10" class="mem-item-name">ptr</div>
+									<div data-id="mem11" class="mem-item-value">0x1521</div>
+									<div data-id="mem12" class="mem-item-address">0x2502</div>
+
+									<div data-id="mem13" class="mem-item-invisible">.</div>
+									<div data-id="mem14" class="mem-item-value">...</div>
+									<div data-id="mem15" class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekararitmetik</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="code"><code class="cpp" data-trim data-line-numbers="1-2"><script type="text/template">
+									int foo = 5;
+									int* ptr = &foo;
+
+									ptr++;
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div data-id="mem1" class="mem-item-invisible">.</div>
+									<div data-id="mem2" class="mem-item-value">...</div>
+									<div data-id="mem3" class="mem-item-address">...</div>
+
+									<div data-id="mem4" class="mem-item-name">foo</div>
+									<div data-id="mem5" class="mem-item-value">5</div>
+									<div data-id="mem6" class="mem-item-address">0x1520</div>
+
+									<div data-id="mem7" class="mem-item-invisible">.</div>
+									<div data-id="mem8" class="mem-item-value">...</div>
+									<div data-id="mem9" class="mem-item-address">...</div>
+
+									<div data-id="mem10" class="mem-item-name">ptr</div>
+									<div data-id="mem11" class="mem-item-value">0x1520</div>
+									<div data-id="mem12" class="mem-item-address">0x2502</div>
+
+									<div data-id="mem13" class="mem-item-invisible">.</div>
+									<div data-id="mem14" class="mem-item-value">...</div>
+									<div data-id="mem15" class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekararitmetik</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="code"><code class="cpp" data-trim data-line-numbers="4"><script type="text/template">
+									int foo = 5;
+									int* ptr = &foo;
+
+									ptr++;
+								</script></code></pre>
+								<p>Vilken address kommer <em>ptr</em> peka på?</p>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div data-id="mem1" class="mem-item-invisible">.</div>
+									<div data-id="mem2" class="mem-item-value">...</div>
+									<div data-id="mem3" class="mem-item-address">...</div>
+
+									<div data-id="mem4" class="mem-item-name">foo</div>
+									<div data-id="mem5" class="mem-item-value">5</div>
+									<div data-id="mem6" class="mem-item-address">0x1520</div>
+
+									<div data-id="mem7" class="mem-item-invisible">.</div>
+									<div data-id="mem8" class="mem-item-value">...</div>
+									<div data-id="mem9" class="mem-item-address">...</div>
+
+									<div data-id="mem10" class="mem-item-name">ptr</div>
+									<div data-id="mem11" class="mem-item-value">0x1520</div>
+									<div data-id="mem12" class="mem-item-address">0x2502</div>
+
+									<div data-id="mem13" class="mem-item-invisible">.</div>
+									<div data-id="mem14" class="mem-item-value">...</div>
+									<div data-id="mem15" class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekararitmetik</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre data-id="code"><code class="cpp" data-trim data-line-numbers="4"><script type="text/template">
+									int foo = 5;
+									int* ptr = &foo;
+
+									ptr++;
+								</script></code></pre>
+
+								<pre><code class="cpp" data-trim><script type="text/template">
+									sizeof(int) // == 4
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div data-id="mem1" class="mem-item-invisible">.</div>
+									<div data-id="mem2" class="mem-item-value">...</div>
+									<div data-id="mem3" class="mem-item-address">...</div>
+
+									<div data-id="mem4" class="mem-item-name">foo</div>
+									<div data-id="mem5" class="mem-item-value">5</div>
+									<div data-id="mem6" class="mem-item-address">0x1520</div>
+
+									<div data-id="memA" class="mem-item-invisible">.</div>
+									<div data-id="memB" class="mem-item-value"></div>
+									<div data-id="memC" class="mem-item-address"></div>
+
+									<div data-id="memA" class="mem-item-invisible">.</div>
+									<div data-id="memB" class="mem-item-value"></div>
+									<div data-id="memC" class="mem-item-address"></div>
+
+									<div data-id="memA" class="mem-item-invisible">.</div>
+									<div data-id="memB" class="mem-item-value"></div>
+									<div data-id="memC" class="mem-item-address"></div>
+
+									<div data-id="memA" class="mem-item-invisible">.</div>
+									<div data-id="memB" class="mem-item-value"></div>
+									<div data-id="memC" class="mem-item-address">0x1524</div>
+
+									<div data-id="mem7" class="mem-item-invisible">.</div>
+									<div data-id="mem8" class="mem-item-value">...</div>
+									<div data-id="mem9" class="mem-item-address">...</div>
+
+									<div data-id="mem10" class="mem-item-name">ptr</div>
+									<div data-id="mem11" class="mem-item-value">0x1524</div>
+									<div data-id="mem12" class="mem-item-address">0x2502</div>
+
+									<div data-id="mem13" class="mem-item-invisible">.</div>
+									<div data-id="mem14" class="mem-item-value">...</div>
+									<div data-id="mem15" class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
 					<section>
 						<h3>Pekare och arrayer</h3>
+
+						<ul>
+							<li>En array är en sekvens värden i minnet</li>
+							<li>En pekare pekar på första elementet</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekare och arrayer</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre style="font-size:0.5em" data-id="code"><code class="cpp" data-trim data-trim data-line-numbers><script type="text/template">
+									int primes[] = { 2, 3, 5, 7 };
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">...</div>
+									<div class="mem-item-address">...</div>
+
+									<div class="mem-item-name">primes[0]</div>
+									<div class="mem-item-value">2</div>
+									<div style="font-size: 0.5em" class="mem-item-address">0x7000-0x7003</div>
+
+									<div class="mem-item-name">primes[1]</div>
+									<div class="mem-item-value">3</div>
+									<div style="font-size: 0.5em" class="mem-item-address">0x7004-0x7007</div>
+
+									<div class="mem-item-name">primes[2]</div>
+									<div class="mem-item-value">5</div>
+									<div style="font-size: 0.5em" class="mem-item-address">0x7008-0x7011</div>
+
+									<div class="mem-item-name">primes[3]</div>
+									<div class="mem-item-value">7</div>
+									<div style="font-size: 0.5em" class="mem-item-address">0x7012-0x7015</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value">...</div>
+									<div class="mem-item-address">...</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Pekare och arrayer</h3>
+
+						<div class="page-split">
+							<div class="page-half">
+								<pre style="font-size:0.5em" data-id="code"><code class="cpp" data-trim data-line-numbers="4-6"><script type="text/template">
+									// primes is actually a pointer
+									int primes[] = { 2, 3, 5, 7 };
+
+									// These are identical
+									primes[2];		// == 5
+									*(primes + 2);	// == 5
+								</script></code></pre>
+							</div>
+							<div class="page-half">
+								<div class="memory-name-value-address">
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">...</div>
+									<div class="mem-item-address-grayed">...</div>
+
+									<div class="mem-item-name-grayed">primes[0]</div>
+									<div class="mem-item-value-grayed">2</div>
+									<div style="font-size: 0.5em" class="mem-item-address-grayed">0x7000-0x7003</div>
+
+									<div class="mem-item-name-grayed">primes[1]</div>
+									<div class="mem-item-value-grayed">3</div>
+									<div style="font-size: 0.5em" class="mem-item-address-grayed">0x7004-0x7007</div>
+
+									<div class="mem-item-name">primes[2]</div>
+									<div class="mem-item-value">5</div>
+									<div style="font-size: 0.5em" class="mem-item-address">0x7008-0x7011</div>
+
+									<div class="mem-item-name-grayed">primes[3]</div>
+									<div class="mem-item-value-grayed">7</div>
+									<div style="font-size: 0.5em" class="mem-item-address-grayed">0x7012-0x7015</div>
+
+									<div class="mem-item-invisible">.</div>
+									<div class="mem-item-value-grayed">...</div>
+									<div class="mem-item-address-grayed">...</div>
+								</div>
+							</div>
+						</div>
 					</section>
 
 					<section>
@@ -1042,21 +2215,132 @@
 							<li>Eller undvika ogiltig access av minne</li>
 						</ul>
 
-						<pre data-id="code"><code class="cpp" data-trim data-line-number><script type="text/template">
+						<pre><code class="cpp" data-trim><script type="text/template">
 							int* ptr = nullptr;
 						</script></code></pre>
 					</section>
 
 					<section>
+						<h3>nullptr</h3>
+
+						<pre><code class="cpp" data-trim><script type="text/template">
+							// Assume you always assign nullptr after deallocation
+							if (number_ptr != nullptr)
+								std::cout << *number_ptr << std::endl;
+						</script></code></pre>
+					</section>
+
+					<section>
 						<h3>Voidpekare</h3>
+
+						<ul>
+							<li>Kan peka på vad som helst</li>
+							<li>Bra när datatyp ej spelar roll</li>
+						</ul>
+
+						<pre><code class="cpp" data-trim><script type="text/template">
+							void* point_at_anything;
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Voidpekare</h3>
+
+						<pre><code class="cpp" data-trim data-line-numbers><script type="text/template">
+							void copy_memory(void* destination, void* source, int bytes)
+							{
+								// chars have a size of operatorn
+								// increments with one byte
+								char* from = static_cast<char*>(source);
+								char* to = static_cast<char*>(destination);
+
+								for (int i = 0; i < bytes; i++)
+									to[i] = from[i];
+							}
+						</script></code></pre>
+
+						<p>Spelar ingen roll <em>vad</em> vi kopierar!</p>
 					</section>
 
 					<section>
 						<h3>Faror med pekare</h3>
+
+						<ul>
+							<li>Var försiktig med vilket minne du accessar</li>
+							<li>Access utanför allokerat minne är oidentifierat!</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Dubbelpekare</h3>
+
+						<p>Pekare som pekar på pekare</p>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers><script type="text/template">
+							int value = 1024;
+							int* p_value = &value;
+							int** pp_value = &p_value;
+						</script></code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Dubbelpekare</h3>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers><script type="text/template">
+							int value = 1024;
+							int* p_value = &value;
+							int** pp_value = &p_value;
+							int*** ppp_value = &pp_value;
+							int**** pppp_value = &ppp_value;
+						</script></code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Dubbelpekare</h3>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers><script type="text/template">
+							int array[];	// 1D array
+							int* array;		// 1D array
+
+							int table[][];	// 2D array
+							int** table;	// 2D array
+						</script></code></pre>
 					</section>
 
 					<section>
 						<h3>Pekare och funktioner</h3>
+
+						<p>Pekare som parameter <em>kopieras</em></p>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers="1-3"><script type="text/template">
+							// value is a copy of a pointer
+							void print_object(int* value) // Call by value
+							{
+								std::cout << *value << std::endl;
+							}
+						</script></code></pre>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers="3"><script type="text/template">
+							int my_favourite_prime = 2;
+							int* prime_ptr = &my_favourite_prime;
+							print_object(prime_ptr);
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Pekare och funktioner</h3>
+
+						<p>Använd <em>const</em> om minnet ej ska modifieras!</p>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers="1-3"><script type="text/template">
+							// "Cat" is a large in memory class
+							// (we see classes in a later lecture)
+							void pet_cat(const Cat* p_cat) 
+							{
+								cat.pet();
+								run();
+							}
+						</script></code></pre>
 					</section>
 				</section>
 
@@ -1065,24 +2349,399 @@
 						<h3>Dynamiskt minne</h3>
 					</section>
 
-					<section>
-						<h3>Livslängd</h3>
+					<section data-auto-animate>
+						<h3>Livslängder</h3>
+
+						<ul>
+							<li><b>Globala objekt</b></li>
+							<li><b>Lokala objekt</b></li>
+							<li><b>Dynamiska objekt</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Livslängder</h3>
+
+						<ul>
+							<li><b>Globala objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas när programmet startar</li>
+								<li>Förstörs när programmet terminerar</li>
+							</ul>
+							<li><b>Lokala objekt</b></li>
+							<li><b>Dynamiska objekt</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Livslängder</h3>
+
+						<ul>
+							<li><b>Globala objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas när programmet startar</li>
+								<li>Förstörs när programmet terminerar</li>
+							</ul>
+							<li><b>Lokala objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas vid deklarering</li>
+								<li>Förstörs när kodblocket terminerar</li>
+							</ul>
+							<li><b>Dynamiska objekt</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Livslängder</h3>
+
+						<ul>
+							<li><b>Globala objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas när programmet startar</li>
+								<li>Förstörs när programmet terminerar</li>
+							</ul>
+							<li><b>Lokala objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas vid deklarering</li>
+								<li>Förstörs när kodblocket terminerar</li>
+							</ul>
+							<li><b>Dynamiska objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas när du allokerar dess minne</li>
+								<li>Förstörs när du deallokerar dess minne</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Livslängder</h3>
+
+						<ul>
+							<li><b>Dynamiska objekt</b></li>
+							<ul style="font-size:0.6em">
+								<li>Skapas när du allokerar dess minne</li>
+								<li>Förstörs när du deallokerar dess minne</li>
+							</ul>
+						</ul>
+
+						<p>Leder mycket lätt till buggar!</p>
 					</section>
 
 					<section>
 						<h3>När ska dynamsikt minne användas?</h3>
+
+						<ol>
+							<li>Vet ej antal objekt vid kompilering</li>
+							<li>Vet ej exakt datatyp av objekt man behöver</li>
+							<li>Dela data mellan objekt</li>
+						</ol>
 					</section>
 
-					<section>
+					<section data-auto-animate>
 						<h3>Minnesallokering</h3>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers="1-2|4-5"><script type="text/template">
+							// Dynamically allocated int
+							int* dynamic_prime = new int(7);
+
+							// Dynamic array of 500 ints
+							int* dynamic_prime_array = new int[500];
+						</script></code></pre>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Minnesdeallokering</h3>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers="3"><script type="text/template">
+							// Dynamically allocated int
+							int* dynamic_prime = new int(7);
+
+							// Dynamic array of 500 ints
+							int* dynamic_prime_array = new int[500];
+
+						</script></code></pre>
+
+						<pre data-id="ptr"><code class="cpp" data-trim data-line-numbers="1-2|4-5"><script type="text/template">
+							// Deallocated dynamic int object
+							delete dynamic_prime;
+
+							// Deallocated dynamic int array
+							delete[] dynamic_prime_array;
+						</script></code></pre>
 					</section>
 
 					<section>
 						<h3>Minnesdeallokering</h3>
+
+						<pre><code class="cpp" data-trim data-line-numbers="1|3|5|7"><script type="text/template">
+							int* dynamic_prime = new int(7);
+
+							std::cout << *dynamic_prime << std::endl; // Ok!
+
+							delete dynamic_prime;
+
+							std::cout << *dynamic_prime << std::endl; // Error!
+
+						</script></code></pre>
 					</section>
 
 					<section>
 						<h3>Minnesdeallokering</h3>
+
+						<pre><code class="cpp" data-trim data-line-numbers><script type="text/template">
+							int* dynamic_prime = new int(7);
+
+							delete dynamic_prime; // Ok!
+							delete dynamic_prime; // Error!
+						</script></code></pre>
+					</section>
+
+					
+					<section>
+						<h3>Minnesdeallokering</h3>
+
+						<pre><code class="cpp" data-trim data-line-numbers="1-2|4"><script type="text/template">
+							int prime = 3;
+							int* prime_ptr = &prime;
+
+							delete prime_ptr; // Error! Address is statically allocated!
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Minnesläckor</h3>
+
+						<pre><code class="cpp" data-trim data-line-numbers><script type="text/template">					
+							void work_with_id(int* source)
+							{
+								int* copy = new int(source);
+								// ...
+								return; // delete before return is missing!
+							}	
+						</script></code></pre>
+
+						<pre><code class="cpp" data-trim data-line-numbers=><script type="text/template">					
+							int id = 12561356;
+							
+							for (int = i; i < 100; i++)
+								work_with_id(&id);
+						</script></code></pre>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h3>Smart pointers</h3>
+					</section>
+
+					<section>
+						<h3>Smart pointers</h3>
+						
+						<ul>
+							<li>Deallokerar objekt automatiskt</li>
+							<li>Ska hjälpa dig som programmerare</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Smart pointers</h3>
+						
+						<ul>
+							<li>Måste ange datatyp när dessa skapas</li>
+							<li>Default-initieras till <em>nullptr</em></li>
+							<li>Använd inte <em>new</em> eller <em>delete</em> för dessa!</li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Smart pointers</h3>
+						
+						<ul>
+							<li><b>unique_ptr</b></li>
+							<li><b>shared_ptr</b></li>
+							<li><b>weak_ptr</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Smart pointers</h3>
+						
+						<ul>
+							<li><b>unique_ptr</b></li>
+							<ul style="font-size:0.7em">
+								<li><em>Äger</em> objektet den pekar på</li>
+								<li>Kan skapas av make_unique</li>
+							</ul>
+							<li><b>shared_ptr</b></li>
+							<li><b>weak_ptr</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Smart pointers</h3>
+						
+						<ul>
+							<li><b>unique_ptr</b></li>
+							<ul style="font-size:0.7em">
+								<li><em>Äger</em> objektet den pekar på</li>
+								<li>Kan skapas av make_unique</li>
+							</ul>
+							<li><b>shared_ptr</b></li>
+							<ul style="font-size:0.7em">
+								<li>Tillåter andra shared_ptrs peka på samma objekt</li>
+								<li>Har en referensräknare</li>
+								<li>Kan skapas av make_shared</li>
+							</ul>
+							<li><b>weak_ptr</b></li>
+						</ul>
+					</section>
+
+					<section data-auto-animate>
+						<h3>Smart pointers</h3>
+						
+						<ul>
+							<li><b>unique_ptr</b></li>
+							<ul style="font-size:0.7em">
+								<li><em>Äger</em> objektet den pekar på</li>
+								<li>Kan skapas av make_unique</li>
+							</ul>
+							<li><b>shared_ptr</b></li>
+							<ul style="font-size:0.7em">
+								<li>Tillåter andra shared_ptrs peka på samma objekt</li>
+								<li>Har en referensräknare</li>
+								<li>Kan skapas av make_shared</li>
+							</ul>
+							<li><b>weak_ptr</b></li>
+							<ul style="font-size:0.7em">
+								<li><em>Svag</em> referens till objekt hanterat av shared_ptr</li>
+								<li>Ökar ej referensräknaren i shared_ptr</li>
+							</ul>
+						</ul>
+					</section>
+					
+
+					<section>
+						<h3>Smart pointers</h3>
+
+						<pre><code class="cpp" data-trim><script type="text/template">					
+							#include <memory>
+						</script></code></pre>
+
+						<pre style="font-size:0.4em"><code class="cpp" data-trim><script type="text/template">
+							std::unique_ptr<float> unique; // nullptr, pointing at type float			
+							std::shared_ptr<int> shared; // nullptr, pointing at type int
+							std::shared_ptr<int> other; // nullptr, pointing at type int
+
+							if (shared); // true of pointing at something
+							*shared; // Get value pointer is pointing at
+
+							shared.get(); // Get raw pointer
+
+							shared.swap(other); // Swap ownership
+							swap(shared, other); // Swap ownership
+
+							shared.reset(); // Removes ownership
+							shared.reset(other_ptr); // Replace managed object
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>Skapa smart pointers</h3>
+
+						<pre><code class="cpp" data-trim><script type="text/template">
+							std::shared_ptr<int> foo; // Ok
+							std::shared_ptr<int> bar = new int(1024); // Error
+							std::shared_ptr<int> baz(new int(42)); // Ok
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>shared_ptr</h3>
+
+						<p>Referensräknare</p>
+
+						<pre><code class="cpp" data-trim><script type="text/template">
+							{
+								std::shared_ptr<int> foo(new int(5));	// ref-count: 1
+
+								{
+									std::shared_ptr<int> copy = foo;	// ref-count: 2
+								} // copy goes out of scope, 
+								// ref-count: 1
+
+							} // foo goes out of scope
+							// ref-count: 0, int is deleted!					
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>shared_ptr</h3>
+
+						<p>Referensräknare</p>
+
+						<pre><code class="cpp" data-trim><script type="text/template">
+							void process(shared_ptr<int> ptr) // ref-count is incremented
+							{
+								// Use ptr
+							} // ptr is destroyed, ref-count is decremented			
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>weak_ptr</h3>
+
+						<ul>
+							<li>Liknar shared_ptr</li>
+							<li>Ökar inte referensräknaren</li>
+							<li>Måste konverteras till <em>shared_ptr</em><br>för att läsa minnet</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Använda weak_ptr</h3>
+
+						<pre style="font-size:0.5em"><code class="cpp" data-trim data-line-numbers="1-2|4|6|8|10"><script type="text/template">
+							std::shared_ptr<int> shared = std::make_shared<int>(5);
+							std::weak_ptr<int> weak(shared);
+
+							std::shared_ptr<int> copy = weak.lock(); // Create shared_ptr
+
+							std::cout << *copy << std::endl; // 5
+
+							std::cout << weak.use_count() << std::endl; // 2
+
+							weak.expired(); // true if weak.use_count() is > 0
+						</script></code></pre>
+					</section>
+
+					<section>
+						<h3>unique_ptr</h3>
+
+						<ul>
+							<li><em>Äger</em> ett objekt</li>
+							<li>Kan inte delas med andra smarta pekare</li>
+							<li>Kan överföra ägarskap</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Använda unique_ptr</h3>
+
+						<pre style="font-size:0.5em"><code class="cpp" data-trim data-line-numbers="1-2|4-5|7-10|12-13"><script type="text/template">
+							std::unique_ptr<float> pi; // unique_ptr that can point at a float 
+							std::unique_ptr<std::string> zoo(new std::string("T-rex"));
+
+							std::unique_ptr<std::string> clone(zoo);	// Error
+							std::unique_ptr<std::string> clone = zoo;	// Error
+
+							// Transfer ownership
+							std::unique_ptr<std::string> new_owner(zoo.release());
+							std::cout << *new_owner << std::endl; // "T-rex"
+							std::cout << *zoo << std::endl; // Error!
+
+							zoo.reset(new_owner.release()); // Take back ownership
+							std::cout << *zoo << std::endl; // "T-rex"
+						</script></code></pre>
 					</section>
 				</section>
 		  </div>
